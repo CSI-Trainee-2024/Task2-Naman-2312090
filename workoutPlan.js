@@ -27,14 +27,15 @@ function addExercise() {
 
 function renderExercise() {
     let exerciseHTML = '';
-    exerciseList.forEach((exerciseObject, i) => {
+    for (let i = 0; i < exerciseList.length; i++) {
+        const exerciseObject = exerciseList[i];
         exerciseHTML += `
             <div>${exerciseObject.exercise}</div>
             <div>-- x${exerciseObject.number}</div>
             <div>${exerciseObject.time}</div>
             <button onclick="deleteExercise(${i})" class="deleteButton">Delete</button>
         `;
-    });
+    }
     document.querySelector('.js-exerciseList').innerHTML = exerciseHTML;
 }
 
@@ -71,11 +72,10 @@ function startNextExercise(index) {
     const countdown = setInterval(() => {
         if (remainingSeconds <= 0) {
             clearInterval(countdown);
-            // Check if it's not the last exercise
             if (index < exerciseList.length - 1) {
                 document.getElementById('timerDisplay').textContent = `Rest for 10 seconds`;
                 setTimeout(() => {
-                    startNextExercise(index + 1); // Move to the next exercise
+                    startNextExercise(index + 1); 
                 }, 10000); // 10 seconds break
             } else {
                 document.getElementById('timerDisplay').textContent = 'Workout complete!';
