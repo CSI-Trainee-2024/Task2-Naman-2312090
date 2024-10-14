@@ -1,0 +1,118 @@
+body{
+    font-family: Arial,sans-serif;
+    background-image: url(https://t4.ftcdn.net/jpg/01/02/52/83/360_F_102528344_XfIuLtPSSBIIR3NYtLRe1QOBUgkdS8Cp.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    /* background-color: rgb(201, 240, 227); */
+}
+
+.header{ margin-bottom: 40px;}
+
+.head-box{
+    display: flex;
+    width: 1000px;
+    background: linear-gradient(45deg, #00C6FF, #456a98);;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 80px;
+    margin-left: 220px;
+    margin-right: auto;
+}
+
+.js-exerciseList, .exercise-input{
+    display: grid;
+    grid-template-columns: 400px 100px 100px 200px; 
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.exercise-input, .js-exerciseList{
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content:center;
+    /* border: 2px solid black; */
+}
+
+.startWorkout{
+    background-color:#c0e3e2;
+    padding: 7px;
+    color:#000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 25px;
+    box-shadow : 2px 4px 4px rgba(0, 0, 0,1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.startWorkout:active{
+    transform: scale(0.95); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-exercise, .input-number, .input-timer, .js-addButton{
+    font-size: 18px;
+    padding: 7px;
+}
+
+.js-addButton{
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.js-addButton:active{
+    transform: scale(0.95); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.js-exerciseList{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px 260px 0px 260px;
+    color: white;
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.deleteButton{
+    background-color: darkred;
+    color:#fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.deleteButton:active{
+    transform: scale(0.95); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.output-box{
+    margin-top: 20px;
+    color: #fff;
+    display: flex;
+    font-size: 35px;
+    align-content: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+
+.output-heading{
+}
+
+#timerDisplay{
+    font-size: 45px;
+    margin-left: 8px;
+}
+

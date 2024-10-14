@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Workout Planner & Timer</title>
+    <link rel="stylesheet" href="workoutPlan.css">
+</head>
+<body>
+    <header class="header">
+        <div class="head-box">
+            <h1>Track Your Reps & Time Efficiently</h1>
+            <button class="startWorkout" onclick="beginWorkout()">Begin Workout</button>
+        </div>
+    </header>
+    <main>
+        <div class="exercise-input">
+            <input placeholder="Add Your Exercise" type="text" class="input-exercise" required>
+            <input type="number" min="0" placeholder="Set" class="input-number" required>
+            <input type="time" class="input-timer" required>
+            <button class="js-addButton" onclick="addExercise()">Add to Workout Plan</button>
+        </div>
+        <div class="js-exerciseList"></div>
+        <span class="output-box">
+            <big class="output-heading">Workout Timer: </big>
+            <div id="timerDisplay">00:00</div>
+        </span>
+        <!-- <button class="End-result">End Task</button> -->
+    </main>
+    <script src="workoutPlan.js"></script>
+</body>
+</html>
