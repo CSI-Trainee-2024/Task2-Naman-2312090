@@ -12,15 +12,14 @@ body{
 
 .head-box{
     display: flex;
-    width: 1000px;
     background: linear-gradient(45deg, #00C6FF, #456a98);;
     align-items: center;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
-    margin-top: 80px;
-    margin-left: 220px;
-    margin-right: auto;
+    width: 90%; 
+    max-width: 1000px; 
+    margin: 80px auto 0;
 }
 
 .js-exerciseList, .exercise-input{
@@ -114,5 +113,36 @@ body{
 #timerDisplay{
     font-size: 45px;
     margin-left: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .head-box {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+    
+    .js-exerciseList {
+        margin: 0 5%; /* Adjust margins */
+    }
+
+    .startWorkout, .js-addButton, .deleteButton {
+        font-size: 1.2rem; /* Smaller buttons */
+        padding: 0.4rem; /* Smaller padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .head-box {
+        padding: 1rem;
+    }
+
+    .js-exerciseList, .exercise-input {
+        grid-template-columns: 1fr; 
+    }
+
+    .output-box {
+        font-size: 1.5rem; 
+    }
 }
 
