@@ -1,5 +1,5 @@
 let exerciseList = JSON.parse(localStorage.getItem('exerciseList')) || [
-   { exercise: 'Bench Press', number: 10, time: '0:05' },]
+    { exercise: 'Bench Press', number: 10, time: '0:05' },]
 
 function addExercise() {
     const exerciseElement = document.querySelector('.input-exercise');
@@ -94,10 +94,10 @@ function updateDisplay(seconds) {
     document.getElementById('timerDisplay').textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-// function endWorkout() {
-//     clearInterval(countdown); 
-//     document.getElementById('End-result').textContent = 'Workout ended!';
-// }
+/*function endTask() {
+    clearInterval(timer); 
+    alert(`Task ended at ${updateTimerDisplay()}!`);
+    resetTimer(); 
+}*/
 
-// Initial render of exercises
 renderExercise();
